@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="main.js"></script>
     <title>Ryan's portfolio</title>
 </head>
@@ -23,18 +24,57 @@
           </ul>
         </nav>
         <section id="greeting" class='sections'>
-          <div class="greeting-left">
-            <img src="images/portfolio-avatar.png">
-          </div>
-          <div class="greeting-right">
-            <p>Welcome to my Portfolio</p>
-            <div>
-              I currently live in Fukuoka, Japan.<br>
-I majored in computer science and tourism Japanese,<br>and am currently preparing for a front-end development job.
+          <h2 class="section-title">
+            Welcome to my Portfolio ! 
+          </h2>
+          <div class="greeting-container">
+            <div class="greeting-left">
+              <img src="images/portfolio-avatar.png">
+            </div>
+            <div class="greeting-right">
+              <div>
+                I currently live in <span class="accent">Fukuoka, Japan</span>.<br>
+  I majored in <span class='accent'>computer science</span> and <span class='accent'>tourism Japanese</span>,<br>and am currently preparing for a <span class="accent">front-end development job</span>.
+              </div>
             </div>
           </div>
         </section>
-        <section id="skills" class='sections'>Skills</section>
+        <section id="skills" class='sections'>
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-container">
+            <div class="skills-languages">
+              <div class="languages-title">Languages</div>
+              <div class="language">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML</span>
+              </div>
+              <div class="language">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS</span>
+              </div>
+              <div class="language">
+                <i class="fa-brands fa-square-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="language">
+                <i class="fa-brands fa-react"></i>
+                <span>React<br>React Native</span>
+              </div>
+              
+            </div>
+            <div class="skills-others">
+              <div class="others-title">Others</div>
+              <div class="other">
+                <i class="fa-brands fa-git"></i>
+                <span>Git</span>
+              </div>
+              <div class="other">
+                <i class="fa-brands fa-github"></i>
+                <span>Github</span>
+              </div>
+            </div>
+          </div>
+        </section>
         <section id="projects" class='sections'>Projects</section>
         <section id="contact" class='sections'>Contact</section>
         <footer id="footer">This is footer section</footer>
