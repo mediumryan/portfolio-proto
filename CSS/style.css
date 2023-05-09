@@ -22,6 +22,13 @@ html {
   font-size: 16px;
   width: 100%;
   height : 100%;
+  background-color: var(--bg-300);
+}
+
+.sections {
+  width : 100%;
+  padding : 2rem 5rem;
+  margin-bottom : 2rem;
   background-color: var(--bg-100);
 }
 
@@ -39,8 +46,9 @@ html {
 }
 
 .nav-title {
-  font-size : 4rem;
+  font-size : 2.5rem;
   padding: 2rem 5rem;
+  font-weight: 700;
 }
 
 .nav-menu {
@@ -67,4 +75,26 @@ html {
 .nav-items:hover {
   opacity : .77;
   background-color: var(--primary-100);
+}
+
+#greeting {
+  display: flex;
+  justify-content: center;
+  align-items : center;
+}
+
+.greeting-left {
+  margin-right : 5rem;
+}
+
+.greeting-right p {
+  color: var(--accent-100);
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.greeting-right div {
+  line-height: 1.5;
+  font-size: 1.5rem;
 }
