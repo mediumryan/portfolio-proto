@@ -37,6 +37,13 @@ html {
   margin: 2.5rem 0;
 }
 
+.section-description {
+  color: var(--text-100);
+  line-height: 1.5;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
 .accent {
   color: var(--accent-200);
 }
@@ -139,6 +146,11 @@ html {
   padding: 1rem;
   margin-right: .5rem;
   text-align: center;
+  transition: 300ms all linear;
+}
+
+.language:hover,.other:hover {
+  transform: scale(1.025) rotate(5deg);
 }
 
 .languages-title, .others-title {
@@ -155,6 +167,51 @@ html {
   color: var(--accent-200);
   font-size: 5rem;
   margin-bottom: .5rem;
+}
+
+.skills-graph {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--bg-300);
+  border-radius: 12px;
+}
+
+.graph-left, .graph-right {
+  width: 33%;
+}
+
+.graph-left {
+  margin-right: 2rem;
+}
+
+.graph-item {
+  margin-bottom: 2rem;
+}
+
+.graph-item-description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--text-100);
+  font-size: 1.25rem;
+}
+
+.graph-main-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-200);
+  position: relative;
+}
+
+.graph-sub-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: var(--accent-100);
 }
   
 #projects {
