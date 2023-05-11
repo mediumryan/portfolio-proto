@@ -228,6 +228,32 @@ html {
   background-color: var(--bg-100);
 }
 
+.project-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.project-btn-container button {
+  border-radius: 8px;
+  color: var(--accent-100);
+  background-color: var(--bg-300);
+  padding: .5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-right: .5rem;
+  cursor: pointer;
+  transition: 300ms all;
+}
+
+.project-btn-container button:hover {
+  color: var(--accent-200);
+  transform: scale(1.025);
+}
+
+
+
 #contact {
   background-color: var(--bg-200);
 }
