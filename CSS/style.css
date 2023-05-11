@@ -60,13 +60,11 @@ html {
   align-items: center;
   background-color: var(--primary-100);
   color : var(--text-100);
-  opacity: .1;
   transition: 300ms all;
 }
 
 #navbar:hover {
-  opacity : 1;
-  z-index : 999;
+  z-index: 999;
 }
 
 .nav-title {

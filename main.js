@@ -1,20 +1,28 @@
+'use strict';
+
 const navbar = document.getElementById('navbar');
 const navbarMenu = document.querySelector('.nav-menu');
-const navbarItems = navbarMenu.childNodes;
-const greeting = document.getElementById('greeting');
-const skills = document.getElementById('skills');
-const projects = document.getElementById('projects');
-const contact = document.getElementById('contact');
+const navItems = navbarMenu.querySelectorAll('.nav-items');
 
-navbarItems[1].addEventListener('click',() => {
-  greeting.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+// handle scrolling to section
+navItems.forEach((navItem) => {
+  const targetId = navItem.getAttribute('data-target');
+  const targetSection = document.querySelector(`#${targetId}`);
+  navItem.addEventListener('click', (event) => {
+    event.preventDefault();
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
 });
-navbarItems[3].addEventListener('click',() => {
-  skills.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-});
-navbarItems[5].addEventListener('click',() => {
-  projects.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-});
-navbarItems[7].addEventListener('click',() => {
-  contact.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-});
+
+// hide navbar
+const navbarHeight = navbar.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  if(window.scrollY > navbarHeight / 3) {
+    navbar.style.opacity = '0.1';
+  } else {
+    navbar.style.opacity = '1';
+  }
+})
+navbar.addEventListener('mouseover', () => {
+  navbar.style.opacity = '1';
+})
