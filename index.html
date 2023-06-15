@@ -1,195 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/reset.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="main.js" defer></script>
-    <title>Ryan's portfolio</title>
-</head>
-<body>
+    <title>Ryan's portfolio - demo</title>
+  </head>
+  <body>
     <div id="main-container">
-        <nav id="navbar">
-          <div class="nav-title">
-            Ryan's Portfolio
+      <nav id="navbar">
+        <div class="nav-title">Ryan's Portfolio</div>
+        <ul class="nav-menu">
+          <li class="nav-items" data-target="greeting">Greeting</li>
+          <li class="nav-items" data-target="skills">Skills</li>
+          <li class="nav-items" data-target="projects">Projects</li>
+          <li class="nav-items" data-target="contact">Contact</li>
+        </ul>
+      </nav>
+      <section id="greeting" class="sections">
+        <h2 class="section-title">Welcome to my Portfolio !</h2>
+        <div class="greeting-container">
+          <div class="greeting-left">
+            <img src="images/portfolio-avatar.png" />
           </div>
-          <ul class="nav-menu">
-            <li class="nav-items" data-target='greeting'>Greeting</li>
-            <li class="nav-items" data-target='skills'>Skills</li>
-            <li class="nav-items" data-target='projects'>Projects</li>
-            <li class="nav-items" data-target='contact'>Contact</li>
-          </ul>
-        </nav>
-        <section id="greeting" class='sections'>
-          <h2 class="section-title">
-            Welcome to my Portfolio ! 
-          </h2>
-          <div class="greeting-container">
-            <div class="greeting-left">
-              <img src="images/portfolio-avatar.png">
-            </div>
-            <div class="greeting-right">
-              <div>
-                I currently live in <span class="accent">Fukuoka, Japan</span>.<br>
-  I majored in <span class='accent'>computer science</span> and <span class='accent'>tourism Japanese</span>,<br>and am currently preparing for a <span class="accent">front-end development job</span>.
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="skills" class='sections'>
-          <h2 class="section-title">Skills</h2>
-          <h4 class="section-description">
-            These are skills and proficiency I can use
-          </h4>
-          <div class="skills-container">
-            <div class="skills-languages">
-              <div class="languages-title">Languages</div>
-              <div class="language">
-                <i class="fa-brands fa-html5"></i>
-                <span>HTML</span>
-              </div>
-              <div class="language">
-                <i class="fa-brands fa-css3-alt"></i>
-                <span>CSS</span>
-              </div>
-              <div class="language">
-                <i class="fa-brands fa-square-js"></i>
-                <span>JavaScript</span>
-              </div>
-              <div class="language">
-                <i class="fa-brands fa-react"></i>
-                <span>React<br>React Native</span>
-              </div>
-              
-            </div>
-            <div class="skills-others">
-              <div class="others-title">Others</div>
-              <div class="other">
-                <i class="fa-brands fa-git"></i>
-                <span>Git</span>
-              </div>
-              <div class="other">
-                <i class="fa-brands fa-github"></i>
-                <span>Github</span>
-              </div>
+          <div class="greeting-right">
+            <div>
+              I currently live in
+              <span class="accent">Fukuoka, Japan</span>.<br />
+              I majored in <span class="accent">computer science</span> and
+              <span class="accent">tourism Japanese</span>,<br />and am
+              currently preparing for a
+              <span class="accent">front-end development job</span>.
             </div>
           </div>
-          <div class="skills-graph">
-            <div class="graph-left">
-              <div class="graph-item">
-                <div class="graph-item-description">
-                  <span>HTML</span>
-                  <span>99%</span>
-                </div>
-                <div class="graph-item-lines">
-                  <div class="graph-main-line">
-                    <div class="graph-sub-line" 
-                      style="width: 99%;"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="graph-item">
-                <div class="graph-item-description">
-                  <span>CSS</span>
-                  <span>80%</span>
-                </div>
-                <div class="graph-item-lines">
-                  <div class="graph-main-line">
-                    <div class="graph-sub-line"
-                      style="width: 80%;"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="graph-item">
-                <div class="graph-item-description">
-                  <span>JavaScript</span>
-                  <span>75%</span>
-                </div>
-                <div class="graph-item-lines">
-                  <div class="graph-main-line">
-                    <div class="graph-sub-line"
-                      style="width: 75%;"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="graph-item">
-                <div class="graph-item-description">
-                  <span>React</span>
-                  <span>50%</span>
-                </div>
-                <div class="graph-item-lines">
-                  <div class="graph-main-line">
-                    <div class="graph-sub-line"
-                      style="width: 50%;"></div>
-                  </div>
-                </div>
-              </div>
+        </div>
+      </section>
+      <section id="skills" class="sections">
+        <h2 class="section-title">Skills</h2>
+        <h4 class="section-description">
+          These are skills and proficiency I can use
+        </h4>
+        <div class="skills-container">
+          <div class="skills-languages">
+            <div class="languages-title">Languages</div>
+            <div class="language">
+              <i class="fa-brands fa-html5"></i>
+              <span>HTML</span>
             </div>
-            <div class="graph-right">
-              <div class="graph-item">
-                <div class="graph-item-description">
-                  <span>Git</span>
-                  <span>50%</span>
-                </div>
-                <div class="graph-item-lines">
-                  <div class="graph-main-line">
-                    <div class="graph-sub-line"
-                      style="width: 50%;"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="graph-item">
-                <div class="graph-item-description">
-                  <span>Github</span>
-                  <span>50%</span>
-                </div>
-                <div class="graph-item-lines">
-                  <div class="graph-main-line">
-                    <div class="graph-sub-line"
-                      style="width: 50%;"></div>
-                  </div>
-                </div>
-              </div>
+            <div class="language">
+              <i class="fa-brands fa-css3-alt"></i>
+              <span>CSS</span>
+            </div>
+            <div class="language">
+              <i class="fa-brands fa-square-js"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="language">
+              <i class="fa-brands fa-react"></i>
+              <span>React<br />React Native</span>
             </div>
           </div>
-        </section>
-        <section id="projects" class='sections'>
-          <h2 class="section-title">Projects</h2>
-          <h4 class="section-description">
-            These are projects by me. <br>
-            You can check the details by <span class="accent">clicking</span> on the image of each project.
-          </h4>
-          <div class="project-btn-container">
-            <button>HTML,CSS,JS</button>
-            <button>React</button>
-            <button>React-Native</button>
-          </div>
-          
-        </section>
-        <section id="contact" class='sections'>
-          <h2 class="section-title">Contact Me</h2>
-          <div class="contact-container">
-            <p class="contact-email">
-              <span class="accent">E-mail</span>
-              : mediumryan@gmail.com</p>
-            <p class="contact-phone">
-              <span class="accent">Phone Number</span>
-              : 080-7361-1518</p>
-            <div class="contact-links">
+          <div class="skills-others">
+            <div class="others-title">Others</div>
+            <div class="other">
+              <i class="fa-brands fa-git"></i>
+              <span>Git</span>
+            </div>
+            <div class="other">
               <i class="fa-brands fa-github"></i>
-              <i class="fa-brands fa-linkedin"></i>
+              <span>Github</span>
             </div>
           </div>
-        </section>
-        <footer id="footer">
-          <span class="accent" style="margin-right: .25rem;">
-            <i class="fa-solid fa-copyright"></i>
-          </span>
-          2023. Ryan all rights reserved.
-        </footer>
+        </div>
+        <div class="skills-graph">
+          <div class="graph-left">
+            <div class="graph-item">
+              <div class="graph-item-description">
+                <span>HTML</span>
+                <span>99%</span>
+              </div>
+              <div class="graph-item-lines">
+                <div class="graph-main-line">
+                  <div class="graph-sub-line" style="width: 99%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="graph-item">
+              <div class="graph-item-description">
+                <span>CSS</span>
+                <span>80%</span>
+              </div>
+              <div class="graph-item-lines">
+                <div class="graph-main-line">
+                  <div class="graph-sub-line" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="graph-item">
+              <div class="graph-item-description">
+                <span>JavaScript</span>
+                <span>75%</span>
+              </div>
+              <div class="graph-item-lines">
+                <div class="graph-main-line">
+                  <div class="graph-sub-line" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="graph-item">
+              <div class="graph-item-description">
+                <span>React</span>
+                <span>50%</span>
+              </div>
+              <div class="graph-item-lines">
+                <div class="graph-main-line">
+                  <div class="graph-sub-line" style="width: 50%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="graph-right">
+            <div class="graph-item">
+              <div class="graph-item-description">
+                <span>Git</span>
+                <span>50%</span>
+              </div>
+              <div class="graph-item-lines">
+                <div class="graph-main-line">
+                  <div class="graph-sub-line" style="width: 50%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="graph-item">
+              <div class="graph-item-description">
+                <span>Github</span>
+                <span>50%</span>
+              </div>
+              <div class="graph-item-lines">
+                <div class="graph-main-line">
+                  <div class="graph-sub-line" style="width: 50%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="sections">
+        <h2 class="section-title">Projects</h2>
+        <h4 class="section-description">
+          These are projects by me. <br />
+          You can check the details by <span class="accent">clicking</span> on
+          the image of each project.
+        </h4>
+        <div class="project-btn-container">
+          <button>HTML,CSS,JS</button>
+          <button>React</button>
+          <button>React-Native</button>
+        </div>
+      </section>
+      <section id="contact" class="sections">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+          <p class="contact-email">
+            <span class="accent">E-mail</span>
+            : mediumryan@gmail.com
+          </p>
+          <p class="contact-phone">
+            <span class="accent">Phone Number</span>
+            : 080-7361-1518
+          </p>
+          <div class="contact-links">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+      </section>
+      <footer id="footer">
+        <span class="accent" style="margin-right: 0.25rem">
+          <i class="fa-solid fa-copyright"></i>
+        </span>
+        2023. Ryan all rights reserved.
+      </footer>
     </div>
-</body>
+  </body>
 </html>
