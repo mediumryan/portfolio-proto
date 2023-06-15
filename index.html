@@ -13,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="main.js" defer></script>
+    <script src="main.js" type="module" defer></script>
     <title>Ryan's portfolio - demo</title>
   </head>
   <body>
@@ -28,7 +28,7 @@
         </ul>
       </nav>
       <section id="greeting" class="sections">
-        <h2 class="section-title">Welcome to my Portfolio !</h2>
+        <h2 class="section-title">Jonghyeok Lee ( Ryan )</h2>
         <div class="greeting-container">
           <div class="greeting-left">
             <img src="images/portfolio-avatar.png" />
@@ -36,11 +36,11 @@
           <div class="greeting-right">
             <div>
               I currently live in
-              <span class="accent">Fukuoka, Japan</span>.<br />
-              I majored in <span class="accent">computer science</span> and
-              <span class="accent">tourism Japanese</span>,<br />and am
+              <span class="accent">Fukuoka</span>, Japan.<br />
+              I majored in <span class="accent">Computer science</span> and
+              <span class="accent">Tourism Japanese</span>,<br />and am
               currently preparing for a
-              <span class="accent">front-end development job</span>.
+              <span class="accent">Front-end development job</span>.
             </div>
           </div>
         </div>
@@ -163,10 +163,12 @@
           the image of each project.
         </h4>
         <div class="project-btn-container">
+          <button>All</button>
           <button>HTML,CSS,JS</button>
           <button>React</button>
           <button>React-Native</button>
         </div>
+        <div class="projects"></div>
       </section>
       <section id="contact" class="sections">
         <h2 class="section-title">Contact Me</h2>
