@@ -5,19 +5,32 @@ const navItems = Array.from(navbarMenu.querySelectorAll(".nav-items"));
 const buttons = document.querySelectorAll(".project-btn-container button");
 
 const project_image_path = {
-  outlier: "./images/project_images/10000hours.png",
-  animation_snow: "./images/project_images/animation-snow.png",
-  check_list: "./images/project_images/check-list.png",
-  kakao_shop: "./images/project_images/kakao-shop.png",
-  mini_game: "./images/project_images/mini-game.png",
-  momentum: "./images/project_images/momentum-clone.png",
-  movie_app: "./images/project_images/movie-app.png",
-  portfolio: "./images/project_images/portfolio-demo.png",
-  simple_nav: "./images/project_images/responsive-navbar.png",
-  search_bar: "./images/project_images/search-bar.png",
-  calculator: "./images/project_images/simple-calculator.png",
-  weather: "./images/project_images/weather-app.png",
-  youtube: "./images/project_images/youtube-clone.png",
+  outlier:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/10000hours.png",
+  animation_snow:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/animation-snow.png",
+  check_list:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/check-list.png",
+  kakao_shop:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/kakao-shop.png",
+  mini_game:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/mini-game.png",
+  momentum:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/momentum-clone.png",
+  movie_app:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/movie-app.png",
+  portfolio:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/portfolio-demo.png",
+  simple_nav:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/responsive-navbar.png",
+  search_bar:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/search-bar.png",
+  calculator:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/simple-calculator.png",
+  weather:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/weather-app.png",
+  youtube:
+    "https://mediumryan.github.io/portfolio-proto/images/project_images/youtube-clone.png",
 };
 
 const projects = [
