@@ -26,6 +26,9 @@ document.addEventListener("scroll", () => {
 navbar.addEventListener("mouseover", () => {
   navbar.style.opacity = "1";
 });
+navbar.addEventListener("click", () => {
+  navbar.style.opacity = "1";
+});
 
 // on-off  navbar on media query
 let isClicked = false;
