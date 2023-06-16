@@ -62,7 +62,7 @@ html {
 .section-description {
   color: var(--text-200);
   line-height: 1.5;
-  font-size: var(--font-size-medium-large);
+  font-size: var(--font-size-medium);
   margin-bottom: var(--margin-size-medium-large);
   text-align: center;
 }
@@ -228,7 +228,7 @@ html {
 .skills-graph {
   display: flex;
   justify-content: space-evenly;
-  width: 95%;
+  width: 60%;
   margin-top: var(--margin-size-medium);
   padding: var(--padding-size-medium);
   background-color: var(--bg-300);
@@ -288,7 +288,7 @@ html {
   color: var(--accent-100);
   background-color: var(--bg-300);
   padding: var(--padding-size-micro) var(--padding-size-small);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-medium);
   font-weight: 300;
   margin-right: var(--margin-size-micro);
   cursor: pointer;
@@ -444,9 +444,17 @@ html {
   .others-title {
     margin: var(--margin-size-medium-large) 0;
   }
+  .skills-graph {
+    width: 95%;
+  }
 
   /* media query : project */
   .projects {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project {
+    width: 160px;
+    height: 220px;
   }
 }
