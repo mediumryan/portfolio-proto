@@ -2,6 +2,7 @@
 const navbar = document.getElementById("navbar");
 const navbarMenu = navbar.querySelector(".nav-menu");
 const navItems = Array.from(navbarMenu.querySelectorAll(".nav-items"));
+const navBtn = navbar.querySelector(".nav-button");
 
 // handle scrolling to section
 navItems.forEach((navItem) => {
@@ -24,6 +25,21 @@ document.addEventListener("scroll", () => {
 });
 navbar.addEventListener("mouseover", () => {
   navbar.style.opacity = "1";
+});
+
+// on-off  navbar on media query
+let isClicked = false;
+
+navBtn.addEventListener("click", () => {
+  if (!isClicked) {
+    navBtn.style.transform = "rotate(180deg)";
+    isClicked = !isClicked;
+    navbarMenu.style.display = "flex";
+  } else {
+    navBtn.style.transform = "rotate(0deg)";
+    isClicked = !isClicked;
+    navbarMenu.style.display = "none";
+  }
 });
 
 // filter projects

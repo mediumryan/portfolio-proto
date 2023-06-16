@@ -1,4 +1,5 @@
 :root {
+  /* color */
   --primary-100: #0085ff;
   --primary-200: #69b4ff;
   --primary-300: #e0ffff;
@@ -9,6 +10,26 @@
   --bg-100: #1e1e1e;
   --bg-200: #2d2d2d;
   --bg-300: #454545;
+  /* font-size */
+  --font-size-large: 36px;
+  --font-size-medium-large: 24px;
+  --font-size-medium: 18px;
+  --font-size-small: 14px;
+  --font-size-micro: 10px;
+  /* margin */
+  --margin-size-large: 80px;
+  --margin-size-medium-large: 36px;
+  --margin-size-medium: 22px;
+  --margin-size-small: 18px;
+  --margin-size-micro: 14px;
+  /* padding */
+  --padding-size-large: 80px;
+  --padding-size-medium-large: 36px;
+  --padding-size-medium: 22px;
+  --padding-size-small: 18px;
+  --padding-size-micro: 14px;
+  /* animation */
+  --animation-duration: 300ms;
 }
 
 @font-face {
@@ -20,12 +41,11 @@
 }
 
 html {
-  font-size: 16px;
   scroll-behavior: smooth;
 }
 
 .sections {
-  padding: 4rem 5rem;
+  padding: 60px 80px;
   color: var(--text-200);
   display: flex;
   flex-direction: column;
@@ -34,16 +54,16 @@ html {
 
 .section-title {
   color: var(--accent-100);
-  font-size: 2rem;
+  font-size: calc(var(--font-size-large) * 0.75);
   font-weight: 700;
-  margin: 2.5rem 0;
+  margin: var(--margin-size-medium-large) 0;
 }
 
 .section-description {
   color: var(--text-200);
   line-height: 1.5;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: var(--font-size-medium-large);
+  margin-bottom: var(--margin-size-medium-large);
   text-align: center;
 }
 
@@ -55,6 +75,8 @@ html {
   font-family: "GmarketSansMedium";
 }
 
+/* navbar */
+
 #navbar {
   position: sticky;
   top: 0;
@@ -62,22 +84,19 @@ html {
   align-items: center;
   background-color: var(--primary-100);
   color: var(--text-100);
-  transition: 300ms all;
-}
-
-#navbar:hover {
   z-index: 999;
+  transition: var(--animation-duration) all;
 }
 
 .nav-title {
-  font-size: 2.5rem;
+  font-size: var(--font-size-large);
   font-weight: 700;
-  padding: 2rem 5rem;
+  padding: var(--padding-size-medium) var(--padding-size-medium-large);
 }
 
 .nav-menu {
   height: 50%;
-  padding: 0 5rem;
+  padding: 0 var(--padding-size-large);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -86,12 +105,12 @@ html {
 .nav-items {
   width: 100%;
   height: 100%;
-  padding: 1rem;
-  margin: 0.5rem;
+  padding: var(--padding-size-small);
+  margin: var(--margin-size-micro);
   text-align: center;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: 300ms all;
+  transition: var(--animation-duration) all;
 }
 
 .nav-items:hover {
@@ -99,31 +118,50 @@ html {
   background-color: var(--primary-200);
 }
 
+.nav-button {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  color: var(--primary-300);
+  border: none;
+  outline: none;
+  font-size: var(--font-size-large);
+  transition: var(--animation-duration) all;
+}
+
+/* greeting */
+
 #greeting {
   background-color: var(--bg-300);
   text-align: center;
 }
 
 .greeting-left {
-  margin-right: 5rem;
+  margin-right: var(--margin-size-large);
 }
 
 .greeting-left img {
   width: 250px;
-  padding: 2rem;
+  padding: var(--padding-size-medium-large);
   border-radius: 25%;
 }
 
-.greeting-right p {
+.greeting-right {
+  line-height: 1.5;
+}
+
+.greeting-right span {
   color: var(--accent-100);
-  font-size: 2rem;
+  font-size: var(--font-size-medium-large);
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: var(--margin-size-medium);
 }
 
 .greeting-right div {
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: var(--font-size-medium-large);
 }
 
 #skills {
@@ -146,8 +184,8 @@ html {
 }
 
 .skills-languages {
-  padding-right: 2rem;
-  margin-right: 2rem;
+  padding-right: var(--padding-size-medium-large);
+  margin-right: var(--margin-size-medium-large);
   border-right: 2px solid var(--text-100);
 }
 
@@ -156,10 +194,10 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-  margin-right: 0.5rem;
+  padding: var(--padding-size-small);
+  margin-right: var(--margin-size-micro);
   text-align: center;
-  transition: 300ms all linear;
+  transition: var(--animation-duration) all linear;
 }
 
 .language:hover,
@@ -171,26 +209,26 @@ html {
 .others-title {
   color: var(--accent-100);
   background-color: var(--bg-300);
-  padding: 0.5rem 1.5rem;
+  padding: var(--padding-size-micro) var(--padding-size-small);
   border-radius: 0.75rem;
-  font-size: 1.25rem;
+  font-size: var(--font-size-medium);
   font-weight: 500;
-  margin-right: 2rem;
+  margin-right: var(--margin-size-medium);
 }
 
 .language i,
 .other i {
   color: var(--accent-200);
-  font-size: 5rem;
-  margin-bottom: 0.5rem;
+  font-size: calc(var(--font-size-large) * 2);
+  margin-bottom: var(--margin-size-micro);
 }
 
 .skills-graph {
   display: flex;
   justify-content: space-evenly;
   width: 50%;
-  margin-top: 2rem;
-  padding: 2rem;
+  margin-top: var(--margin-size-medium);
+  padding: var(--padding-size-medium-large);
   background-color: var(--bg-300);
   border-radius: 12px;
 }
@@ -201,19 +239,19 @@ html {
 }
 
 .graph-left {
-  margin-right: 2rem;
+  margin-right: var(--margin-size-medium);
 }
 
 .graph-item {
-  margin-bottom: 2rem;
+  margin-bottom: var(--margin-size-medium);
 }
 
 .graph-item-description {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: var(--margin-size-small);
   color: var(--text-100);
-  font-size: 1.25rem;
+  font-size: var(--font-size-medium);
   font-weight: 500;
 }
 
@@ -240,19 +278,19 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 2rem;
+  margin-bottom: var(--margin-size-medium-large);
 }
 
 .project-btn-container button {
   border-radius: 8px;
   color: var(--accent-100);
   background-color: var(--bg-300);
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
+  padding: var(--padding-size-micro) var(--padding-size-small);
+  font-size: var(--font-size-small);
   font-weight: 300;
-  margin-right: 0.5rem;
+  margin-right: var(--margin-size-micro);
   cursor: pointer;
-  transition: 300ms all;
+  transition: var(--animation-duration) all;
 }
 
 .project-btn-container button:hover {
@@ -293,11 +331,11 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 24px;
+  font-size: var(--font-size-medium-large);
   background-color: rgba(255, 255, 255, 0.8);
   color: var(--primary-100);
   opacity: 0;
-  transition: 300ms opacity ease-in;
+  transition: var(--animation-duration) opacity ease-in;
 }
 
 .project-description:hover {
@@ -311,11 +349,11 @@ html {
 .contact-container {
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: var(--font-size-medium-large);
 }
 
 .contact-container p {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--margin-size-medium);
 }
 
 .contact-links {
@@ -325,10 +363,11 @@ html {
 
 .contact-links > i {
   color: var(--accent-200);
-  font-size: 2.5rem;
-  margin: 0.5rem;
-  padding: 1rem 0 1rem 1rem;
-  transition: 300ms all;
+  font-size: var(--font-size-large);
+  margin: var(--margin-size-micro);
+  padding: var(--padding-size-small);
+  padding-right: 0;
+  transition: var(--animation-duration) all;
 }
 
 .contact-links > i:hover {
@@ -337,8 +376,61 @@ html {
 
 #footer {
   background-color: var(--bg-100);
-  padding: 1rem;
+  padding: var(--padding-size-small);
   display: flex;
   justify-content: center;
   color: var(--primary-300);
+}
+
+@media screen and (max-width: 413px) {
+  :root {
+    /* font-size */
+    --font-size-large: 28px;
+    --font-size-medium-large: 20px;
+    --font-size-medium: 14px;
+    --font-size-small: 10px;
+    --font-size-micro: 8px;
+    /* margin */
+    --margin-size-large: 40px;
+    --margin-size-medium-large: 18px;
+    --margin-size-medium: 11px;
+    --margin-size-small: 9px;
+    --margin-size-micro: 7px;
+    /* padding */
+    --padding-size-large: 40px;
+    --padding-size-medium-large: 18px;
+    --padding-size-medium: 11px;
+    --padding-size-small: 9px;
+    --padding-size-micro: 7px;
+    /* animation */
+  }
+  .sections {
+    padding: 30px 40px;
+  }
+
+  #navbar,
+  .nav-menu,
+  .skills-container,
+  .skills-languages,
+  .skills-others {
+    flex-direction: column;
+  }
+  .nav-title {
+    text-align: center;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .nav-button {
+    display: block;
+  }
+  #greeting {
+    text-align: left;
+  }
+  .greeting-left {
+    margin: 0;
+  }
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
