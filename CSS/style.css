@@ -139,7 +139,7 @@ html {
 }
 
 .greeting-left {
-  margin-right: var(--margin-size-large);
+  margin: 0 auto;
   text-align: center;
 }
 
