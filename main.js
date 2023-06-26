@@ -1,64 +1,49 @@
-"use strict";
-const navbar = document.getElementById("navbar");
-const navbarMenu = navbar.querySelector(".nav-menu");
-const navItems = Array.from(navbarMenu.querySelectorAll(".nav-items"));
-const navBtn = navbar.querySelector(".nav-button");
+$(function () {
+  const navbar = $("#navbar");
+  const navbarMenu = $(".nav-menu");
+  const navItems = navbarMenu.find(".nav-items");
+  const navBtn = $(".nav-button");
+  const buttons = $(".project-btn-container");
+  const projects = $(".project");
+  let isClicked = false;
 
-// handle scrolling to section
-navItems.forEach((navItem) => {
-  const targetId = navItem.getAttribute("data-target");
-  const targetSection = document.querySelector(`#${targetId}`);
-  navItem.addEventListener("click", (event) => {
-    event.preventDefault();
-    targetSection.scrollIntoView({ behavior: "smooth" });
+  // 스크롤 이벤트를 통해 네비게이션 바 숨김 처리
+  const navbarHeight = navbar.outerHeight();
+  $(document).on("scroll", () => {
+    navbar.toggleClass("transparent", window.scrollY > navbarHeight / 3);
   });
-});
 
-// hide navbar
-const navbarHeight = navbar.getBoundingClientRect().height;
-document.addEventListener("scroll", () => {
-  if (window.scrollY > navbarHeight / 3) {
-    navbar.style.opacity = "0.1";
-  } else {
-    navbar.style.opacity = "1";
-  }
-});
-navbar.addEventListener("mouseover", () => {
-  navbar.style.opacity = "1";
-});
-navbar.addEventListener("click", () => {
-  navbar.style.opacity = "1";
-});
+  // 네비게이션 바에 마우스 오버 및 클릭 이벤트를 통해 숨김 처리 해제
+  navbar.on("mouseover click", () => {
+    navbar.removeClass("transparent");
+  });
 
-// on-off  navbar on media query
-let isClicked = false;
-
-navBtn.addEventListener("click", () => {
-  if (!isClicked) {
-    navBtn.style.transform = "rotate(180deg)";
+  // 네비게이션 바 토글 버튼 클릭 시 네비게이션 메뉴 표시 및 회전 효과
+  navBtn.on("click", () => {
+    navBtn.toggleClass("rotated", isClicked);
+    navbarMenu.toggle();
     isClicked = !isClicked;
-    navbarMenu.style.display = "flex";
-  } else {
-    navBtn.style.transform = "rotate(0deg)";
-    isClicked = !isClicked;
-    navbarMenu.style.display = "none";
-  }
-});
+  });
 
-// filter projects
-
-const btns = document.querySelector(".project-btn-container");
-const projects = document.querySelectorAll(".project");
-btns.addEventListener("click", (e) => {
-  const filter = e.target.dataset.filter;
-  if (!filter) {
-    return;
-  }
-  projects.forEach((project) => {
-    if (filter === "all" || filter === project.dataset.target) {
-      project.style.display = "block";
-    } else {
-      project.style.display = "none";
+  // 프로젝트 필터링
+  buttons.on("click", (e) => {
+    const filter = $(this).attr("data-filter");
+    if (!filter) {
+      return;
     }
+    const filteredProjects = projects.filter((index, project) => {
+      const target = $(project).attr("data-target");
+      return filter === "all" || filter === target;
+    });
+    projects.hide();
+    filteredProjects.show();
+  });
+
+  // 네비게이션 메뉴 항목 클릭 시 해당 섹션으로 스크롤 이동
+  navItems.on("click", (event) => {
+    event.preventDefault();
+    const targetId = $(this).attr("data-target");
+    const targetSection = $(`#${targetId}`);
+    targetSection[0].scrollIntoView({ behavior: "smooth" });
   });
 });

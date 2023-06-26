@@ -71,6 +71,14 @@ html {
   color: var(--primary-200);
 }
 
+.transparent {
+  opacity: 0;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
 #main-container {
   font-family: "GmarketSansMedium";
 }
