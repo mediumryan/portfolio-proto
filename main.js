@@ -26,8 +26,8 @@ $(function () {
   });
 
   // 프로젝트 필터링
-  buttons.on("click", (e) => {
-    const filter = $(this).attr("data-filter");
+  buttons.on("click", (event) => {
+    const filter = $(event.target).attr("data-filter");
     if (!filter) {
       return;
     }
@@ -42,7 +42,7 @@ $(function () {
   // 네비게이션 메뉴 항목 클릭 시 해당 섹션으로 스크롤 이동
   navItems.on("click", (event) => {
     event.preventDefault();
-    const targetId = $(this).attr("data-target");
+    const targetId = $(event.target).attr("data-target");
     const targetSection = $(`#${targetId}`);
     targetSection[0].scrollIntoView({ behavior: "smooth" });
   });
